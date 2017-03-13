@@ -1,11 +1,12 @@
 os:
   - linux
 language: c
+sudo: required
 
 before_install:
   - git clone https://github.com/vitasdk/vdpm
   - cd vdpm
-  - ./bootstrap-vitasdk.sh
+  - sudo ./bootstrap-vitasdk.sh
   - export VITASDK=/usr/local/vitasdk
   - export PATH=$VITASDK/bin:$PATH
   - cd ..
